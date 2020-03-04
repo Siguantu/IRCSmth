@@ -50,12 +50,12 @@ public class IRCCore implements IRCInterface {
 
     @Override
     public void IRCDisconnect() throws IOException {
-        IRCSendMessage("PART #" + channel);
+        IRCSendMessage("PART " + channel);
     }
 
     @Override
     public void IRCChangeServer(String server, int port) throws IOException {
-        IRCSendMessage("PART #" + channel);
+        IRCSendMessage("PART " + channel);
         init(server, port);
     }
     public String getServer() {
